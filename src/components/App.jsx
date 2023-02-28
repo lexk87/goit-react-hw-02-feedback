@@ -7,6 +7,8 @@ export class App extends Component {
         bad: 0,
     };
 
+    leaveFeedback = () => {};
+
     countTotalFeedback = () => {
         return this.state.good + this.state.neutral + this.state.bad;
     };
@@ -25,12 +27,25 @@ export class App extends Component {
 
         return (
             <>
-                <Section>
-                    <FeedbackOptions />
+                <Section title="Please leave feedback">
+                    <FeedbackOptions
+                        options={options}
+                        onLeaveFeedback={this.leaveFeedback}
+                    />
                 </Section>
 
-                <Section>
-                    {total > 0 ? <Statistics /> : <Notification />}
+                <Section title="Statistics">
+                    {total > 0 ? (
+                        <Statistics
+                            good={good}
+                            neutral={neutral}
+                            bad={bad}
+                            total={total}
+                            positivePercentage={positivePercentage}
+                        />
+                    ) : (
+                        <Notification message="There is no feedback" />
+                    )}
                 </Section>
             </>
         );
