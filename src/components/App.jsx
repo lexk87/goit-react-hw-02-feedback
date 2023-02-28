@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Section, FeedbackOptions, Notification } from 'components';
 
 export class App extends Component {
     state = {
