@@ -1,3 +1,4 @@
 export * from './Section/Section';
 export * from './FeedbackOptions/FeedbackOptions';
-export * from './Section/Section';
+export * from './Notification/Notification';
+export * from './Statistics/Statistics';
