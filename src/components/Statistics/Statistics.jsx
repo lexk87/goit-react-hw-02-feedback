@@ -10,19 +10,19 @@ export const Statistics = ({
 }) => (
     <List>
         <Item>
-            <Txt>Good {good}</Txt>
+            <Txt>Good: {good}</Txt>
         </Item>
         <Item>
-            <Txt>Neutral {neutral}</Txt>
+            <Txt>Neutral: {neutral}</Txt>
         </Item>
         <Item>
-            <Txt>Bad {bad}</Txt>
+            <Txt>Bad: {bad}</Txt>
         </Item>
         <Item>
-            <Txt>Total {total}</Txt>
+            <Txt>Total: {total}</Txt>
         </Item>
         <Item>
-            <Txt>Positive feedback {positivePercentage}</Txt>
+            <Txt>Positive feedback: {positivePercentage}%</Txt>
         </Item>
     </List>
 );
